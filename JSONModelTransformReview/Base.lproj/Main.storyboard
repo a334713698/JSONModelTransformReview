@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,80 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRe-Kj-tKz">
+                                <rect key="frame" x="73.666666666666671" y="319" width="88.000000000000014" height="30"/>
+                                <state key="normal" title="MJExtension"/>
+                                <connections>
+                                    <action selector="mj_click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PRU-TT-vGk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAc-fp-kvH">
+                                <rect key="frame" x="99.666666666666686" y="357" width="62" height="30"/>
+                                <state key="normal" title="YYModel"/>
+                                <connections>
+                                    <action selector="yy_click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ygb-lA-Efh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="运行时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yk6-2c-tZD">
+                                <rect key="frame" x="196.66666666666666" y="323.66666666666669" width="69.333333333333343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="运行时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IbX-b3-nhQ">
+                                <rect key="frame" x="196.66666666666666" y="361.66666666666669" width="69.333333333333343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1000" borderStyle="roundedRect" placeholder="循环次数" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HgZ-wq-vMt">
+                                <rect key="frame" x="137.66666666666666" y="244" width="100" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="ckR-wo-9dJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pYj-BT-cBf">
+                                <rect key="frame" x="60" y="124" width="255" height="32"/>
+                                <segments>
+                                    <segment title="WeiboModel"/>
+                                    <segment title="GithubUserModel"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="oAc-fp-kvH" firstAttribute="trailing" secondItem="pRe-Kj-tKz" secondAttribute="trailing" id="36s-5T-2aa"/>
+                            <constraint firstItem="IbX-b3-nhQ" firstAttribute="centerY" secondItem="oAc-fp-kvH" secondAttribute="centerY" id="5jm-rP-lTl"/>
+                            <constraint firstItem="oAc-fp-kvH" firstAttribute="top" secondItem="pRe-Kj-tKz" secondAttribute="bottom" constant="8" id="7J0-F4-Mdo"/>
+                            <constraint firstItem="yk6-2c-tZD" firstAttribute="leading" secondItem="pRe-Kj-tKz" secondAttribute="trailing" constant="35" id="Eyc-U6-kfK"/>
+                            <constraint firstItem="IbX-b3-nhQ" firstAttribute="leading" secondItem="oAc-fp-kvH" secondAttribute="trailing" constant="35" id="YYX-cc-9US"/>
+                            <constraint firstItem="pYj-BT-cBf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="f2x-P1-l1F"/>
+                            <constraint firstItem="HgZ-wq-vMt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="iBW-vi-UaI"/>
+                            <constraint firstItem="HgZ-wq-vMt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iHO-gD-tyP"/>
+                            <constraint firstItem="pRe-Kj-tKz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-70" id="mXJ-SJ-jgL"/>
+                            <constraint firstItem="pYj-BT-cBf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oPg-Fo-UDr"/>
+                            <constraint firstItem="yk6-2c-tZD" firstAttribute="centerY" secondItem="pRe-Kj-tKz" secondAttribute="centerY" id="t9d-tA-56t"/>
+                            <constraint firstItem="pRe-Kj-tKz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="275" id="wGK-0A-eHj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="SEG" destination="pYj-BT-cBf" id="HWi-Hd-KbQ"/>
+                        <outlet property="mjLab" destination="yk6-2c-tZD" id="95h-xO-7DL"/>
+                        <outlet property="tf" destination="HgZ-wq-vMt" id="3Tz-l8-KIj"/>
+                        <outlet property="yyLab" destination="IbX-b3-nhQ" id="1v8-77-umG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="141" y="139"/>
         </scene>
     </scenes>
 </document>

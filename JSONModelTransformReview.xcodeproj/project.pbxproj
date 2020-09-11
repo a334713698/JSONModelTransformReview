@@ -14,6 +14,24 @@
 		713FA3F2250B131C00D40688 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 713FA3F1250B131C00D40688 /* Assets.xcassets */; };
 		713FA3F5250B131C00D40688 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 713FA3F3250B131C00D40688 /* LaunchScreen.storyboard */; };
 		713FA3F8250B131C00D40688 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 713FA3F7250B131C00D40688 /* main.m */; };
+		713FA427250B13DA00D40688 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 713FA401250B13D900D40688 /* NSObject+YYModel.m */; };
+		713FA428250B13DA00D40688 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 713FA402250B13D900D40688 /* YYClassInfo.m */; };
+		713FA434250B13DA00D40688 /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = 713FA41D250B13D900D40688 /* user.json */; };
+		713FA435250B13DA00D40688 /* GitHubUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 713FA41E250B13D900D40688 /* GitHubUser.m */; };
+		713FA436250B13DA00D40688 /* YYWeiboModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 713FA420250B13D900D40688 /* YYWeiboModel.m */; };
+		713FA437250B13DA00D40688 /* MJWeiboModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 713FA421250B13D900D40688 /* MJWeiboModel.m */; };
+		713FA438250B13DA00D40688 /* DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 713FA422250B13D900D40688 /* DateFormatter.m */; };
+		713FA439250B13DA00D40688 /* weibo.json in Resources */ = {isa = PBXBuildFile; fileRef = 713FA424250B13D900D40688 /* weibo.json */; };
+		713FA44F250B143C00D40688 /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 713FA43B250B143B00D40688 /* NSObject+MJProperty.m */; };
+		713FA450250B143C00D40688 /* NSObject+MJClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 713FA43C250B143B00D40688 /* NSObject+MJClass.m */; };
+		713FA451250B143C00D40688 /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 713FA441250B143B00D40688 /* MJPropertyKey.m */; };
+		713FA452250B143C00D40688 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 713FA443250B143B00D40688 /* NSString+MJExtension.m */; };
+		713FA453250B143C00D40688 /* MJPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = 713FA445250B143B00D40688 /* MJPropertyType.m */; };
+		713FA454250B143C00D40688 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 713FA446250B143B00D40688 /* MJFoundation.m */; };
+		713FA455250B143C00D40688 /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 713FA448250B143C00D40688 /* NSObject+MJCoding.m */; };
+		713FA456250B143C00D40688 /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 713FA44B250B143C00D40688 /* MJProperty.m */; };
+		713FA457250B143C00D40688 /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 713FA44C250B143C00D40688 /* MJExtensionConst.m */; };
+		713FA458250B143C00D40688 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 713FA44E250B143C00D40688 /* NSObject+MJKeyValue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +47,42 @@
 		713FA3F4250B131C00D40688 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		713FA3F6250B131C00D40688 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		713FA3F7250B131C00D40688 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		713FA3FF250B13D900D40688 /* YYClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYClassInfo.h; sourceTree = "<group>"; };
+		713FA400250B13D900D40688 /* YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYModel.h; sourceTree = "<group>"; };
+		713FA401250B13D900D40688 /* NSObject+YYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YYModel.m"; sourceTree = "<group>"; };
+		713FA402250B13D900D40688 /* YYClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYClassInfo.m; sourceTree = "<group>"; };
+		713FA403250B13D900D40688 /* NSObject+YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YYModel.h"; sourceTree = "<group>"; };
+		713FA41C250B13D900D40688 /* GitHubUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubUser.h; sourceTree = "<group>"; };
+		713FA41D250B13D900D40688 /* user.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user.json; sourceTree = "<group>"; };
+		713FA41E250B13D900D40688 /* GitHubUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubUser.m; sourceTree = "<group>"; };
+		713FA420250B13D900D40688 /* YYWeiboModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeiboModel.m; sourceTree = "<group>"; };
+		713FA421250B13D900D40688 /* MJWeiboModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJWeiboModel.m; sourceTree = "<group>"; };
+		713FA422250B13D900D40688 /* DateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateFormatter.m; sourceTree = "<group>"; };
+		713FA423250B13D900D40688 /* YYWeiboModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeiboModel.h; sourceTree = "<group>"; };
+		713FA424250B13D900D40688 /* weibo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weibo.json; sourceTree = "<group>"; };
+		713FA425250B13D900D40688 /* DateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateFormatter.h; sourceTree = "<group>"; };
+		713FA426250B13D900D40688 /* MJWeiboModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJWeiboModel.h; sourceTree = "<group>"; };
+		713FA43A250B143B00D40688 /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
+		713FA43B250B143B00D40688 /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
+		713FA43C250B143B00D40688 /* NSObject+MJClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJClass.m"; sourceTree = "<group>"; };
+		713FA43D250B143B00D40688 /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
+		713FA43E250B143B00D40688 /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
+		713FA43F250B143B00D40688 /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
+		713FA440250B143B00D40688 /* MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJProperty.h; sourceTree = "<group>"; };
+		713FA441250B143B00D40688 /* MJPropertyKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyKey.m; sourceTree = "<group>"; };
+		713FA442250B143B00D40688 /* NSObject+MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJProperty.h"; sourceTree = "<group>"; };
+		713FA443250B143B00D40688 /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
+		713FA444250B143B00D40688 /* MJPropertyKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyKey.h; sourceTree = "<group>"; };
+		713FA445250B143B00D40688 /* MJPropertyType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyType.m; sourceTree = "<group>"; };
+		713FA446250B143B00D40688 /* MJFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation.m; sourceTree = "<group>"; };
+		713FA447250B143C00D40688 /* MJExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConst.h; sourceTree = "<group>"; };
+		713FA448250B143C00D40688 /* NSObject+MJCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJCoding.m"; sourceTree = "<group>"; };
+		713FA449250B143C00D40688 /* NSObject+MJClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJClass.h"; sourceTree = "<group>"; };
+		713FA44A250B143C00D40688 /* MJFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJFoundation.h; sourceTree = "<group>"; };
+		713FA44B250B143C00D40688 /* MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJProperty.m; sourceTree = "<group>"; };
+		713FA44C250B143C00D40688 /* MJExtensionConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionConst.m; sourceTree = "<group>"; };
+		713FA44D250B143C00D40688 /* MJPropertyType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyType.h; sourceTree = "<group>"; };
+		713FA44E250B143C00D40688 /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +115,10 @@
 		713FA3E4250B131B00D40688 /* JSONModelTransformReview */ = {
 			isa = PBXGroup;
 			children = (
+				713FA41F250B13D900D40688 /* WeiboModel */,
+				713FA41B250B13D900D40688 /* GithubUserModel */,
+				713FA404250B13D900D40688 /* MJExtension */,
+				713FA3FE250B13D900D40688 /* YYModel */,
 				713FA3E5250B131B00D40688 /* AppDelegate.h */,
 				713FA3E6250B131B00D40688 /* AppDelegate.m */,
 				713FA3E8250B131B00D40688 /* SceneDelegate.h */,
@@ -74,6 +132,70 @@
 				713FA3F7250B131C00D40688 /* main.m */,
 			);
 			path = JSONModelTransformReview;
+			sourceTree = "<group>";
+		};
+		713FA3FE250B13D900D40688 /* YYModel */ = {
+			isa = PBXGroup;
+			children = (
+				713FA400250B13D900D40688 /* YYModel.h */,
+				713FA403250B13D900D40688 /* NSObject+YYModel.h */,
+				713FA401250B13D900D40688 /* NSObject+YYModel.m */,
+				713FA3FF250B13D900D40688 /* YYClassInfo.h */,
+				713FA402250B13D900D40688 /* YYClassInfo.m */,
+			);
+			path = YYModel;
+			sourceTree = "<group>";
+		};
+		713FA404250B13D900D40688 /* MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				713FA43F250B143B00D40688 /* MJExtension.h */,
+				713FA447250B143C00D40688 /* MJExtensionConst.h */,
+				713FA44C250B143C00D40688 /* MJExtensionConst.m */,
+				713FA44A250B143C00D40688 /* MJFoundation.h */,
+				713FA446250B143B00D40688 /* MJFoundation.m */,
+				713FA440250B143B00D40688 /* MJProperty.h */,
+				713FA44B250B143C00D40688 /* MJProperty.m */,
+				713FA444250B143B00D40688 /* MJPropertyKey.h */,
+				713FA441250B143B00D40688 /* MJPropertyKey.m */,
+				713FA44D250B143C00D40688 /* MJPropertyType.h */,
+				713FA445250B143B00D40688 /* MJPropertyType.m */,
+				713FA449250B143C00D40688 /* NSObject+MJClass.h */,
+				713FA43C250B143B00D40688 /* NSObject+MJClass.m */,
+				713FA43D250B143B00D40688 /* NSObject+MJCoding.h */,
+				713FA448250B143C00D40688 /* NSObject+MJCoding.m */,
+				713FA43A250B143B00D40688 /* NSObject+MJKeyValue.h */,
+				713FA44E250B143C00D40688 /* NSObject+MJKeyValue.m */,
+				713FA442250B143B00D40688 /* NSObject+MJProperty.h */,
+				713FA43B250B143B00D40688 /* NSObject+MJProperty.m */,
+				713FA43E250B143B00D40688 /* NSString+MJExtension.h */,
+				713FA443250B143B00D40688 /* NSString+MJExtension.m */,
+			);
+			path = MJExtension;
+			sourceTree = "<group>";
+		};
+		713FA41B250B13D900D40688 /* GithubUserModel */ = {
+			isa = PBXGroup;
+			children = (
+				713FA41D250B13D900D40688 /* user.json */,
+				713FA41C250B13D900D40688 /* GitHubUser.h */,
+				713FA41E250B13D900D40688 /* GitHubUser.m */,
+			);
+			path = GithubUserModel;
+			sourceTree = "<group>";
+		};
+		713FA41F250B13D900D40688 /* WeiboModel */ = {
+			isa = PBXGroup;
+			children = (
+				713FA424250B13D900D40688 /* weibo.json */,
+				713FA423250B13D900D40688 /* YYWeiboModel.h */,
+				713FA420250B13D900D40688 /* YYWeiboModel.m */,
+				713FA426250B13D900D40688 /* MJWeiboModel.h */,
+				713FA421250B13D900D40688 /* MJWeiboModel.m */,
+				713FA422250B13D900D40688 /* DateFormatter.m */,
+				713FA425250B13D900D40688 /* DateFormatter.h */,
+			);
+			path = WeiboModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +258,8 @@
 				713FA3F5250B131C00D40688 /* LaunchScreen.storyboard in Resources */,
 				713FA3F2250B131C00D40688 /* Assets.xcassets in Resources */,
 				713FA3F0250B131B00D40688 /* Main.storyboard in Resources */,
+				713FA439250B13DA00D40688 /* weibo.json in Resources */,
+				713FA434250B13DA00D40688 /* user.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,9 +270,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				713FA455250B143C00D40688 /* NSObject+MJCoding.m in Sources */,
+				713FA453250B143C00D40688 /* MJPropertyType.m in Sources */,
 				713FA3ED250B131B00D40688 /* ViewController.m in Sources */,
+				713FA427250B13DA00D40688 /* NSObject+YYModel.m in Sources */,
+				713FA44F250B143C00D40688 /* NSObject+MJProperty.m in Sources */,
 				713FA3E7250B131B00D40688 /* AppDelegate.m in Sources */,
+				713FA435250B13DA00D40688 /* GitHubUser.m in Sources */,
+				713FA438250B13DA00D40688 /* DateFormatter.m in Sources */,
+				713FA458250B143C00D40688 /* NSObject+MJKeyValue.m in Sources */,
+				713FA454250B143C00D40688 /* MJFoundation.m in Sources */,
 				713FA3F8250B131C00D40688 /* main.m in Sources */,
+				713FA457250B143C00D40688 /* MJExtensionConst.m in Sources */,
+				713FA437250B13DA00D40688 /* MJWeiboModel.m in Sources */,
+				713FA428250B13DA00D40688 /* YYClassInfo.m in Sources */,
+				713FA450250B143C00D40688 /* NSObject+MJClass.m in Sources */,
+				713FA456250B143C00D40688 /* MJProperty.m in Sources */,
+				713FA452250B143C00D40688 /* NSString+MJExtension.m in Sources */,
+				713FA436250B13DA00D40688 /* YYWeiboModel.m in Sources */,
+				713FA451250B143C00D40688 /* MJPropertyKey.m in Sources */,
 				713FA3EA250B131B00D40688 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
