@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 ibireme. All rights reserved.
 //
 
-#import "YYModel.h"
+#import "NSObject+YYModel.h"
 
 @interface YYWeiboPictureMetadata : NSObject <NSCoding, NSCopying>
 @property (nonatomic, strong) NSString *url;

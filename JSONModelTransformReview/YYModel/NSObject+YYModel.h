@@ -68,6 +68,13 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSObject (YYModel)
 
 /**
+*  重置循环统计次数
+*/
++ (void)yy_resetCirclesCount;
++ (void)yy_printfCount;
+
+
+/**
  通过一个 json，创建和返回一个新的实例
  此方法是线程安全的。
  

@@ -38,6 +38,20 @@
 
 @implementation NSObject (MJKeyValue)
 
+static long long mj_J2MCount = 0;
+static long long mj_M2JCount = 0;
+/**
+*  重置循环统计次数
+*/
++ (void)mj_resetCirclesCount{
+    mj_J2MCount = 0;
+    mj_M2JCount = 0;
+}
++ (void)mj_printfCount{
+    NSLog(@"mj_J2MCount：%ld", mj_J2MCount);
+    NSLog(@"mj_M2JCount：%ld", mj_M2JCount);
+}
+
 #pragma mark - 错误
 static const char MJErrorKey = '\0';
 + (NSError *)mj_error
@@ -107,6 +121,7 @@ static const char MJReferenceReplacedKeyWhenCreatingKeyValuesKey = '\0';
     
     //通过封装的方法回调一个通过运行时编写的，用于返回属性列表的方法。
     [clazz mj_enumerateProperties:^(MJProperty *property, BOOL *stop) {
+        mj_J2MCount++;
         @try {
             // 0.检测是否被忽略
             if (allowedPropertyNames.count && ![allowedPropertyNames containsObject:property.name]) return;
@@ -355,6 +370,7 @@ static const char MJReferenceReplacedKeyWhenCreatingKeyValuesKey = '\0';
     NSArray *ignoredPropertyNames = [clazz mj_totalIgnoredPropertyNames];
     
     [clazz mj_enumerateProperties:^(MJProperty *property, BOOL *stop) {
+        mj_M2JCount++;
         @try {
             // 0.检测是否被忽略
             if (allowedPropertyNames.count && ![allowedPropertyNames containsObject:property.name]) return;

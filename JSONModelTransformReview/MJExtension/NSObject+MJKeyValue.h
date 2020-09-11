@@ -191,4 +191,11 @@
  *  转换为JSON 字符串
  */
 - (NSString *)mj_JSONString;
+
+
+/**
+*  重置循环统计次数
+*/
++ (void)mj_resetCirclesCount;
++ (void)mj_printfCount;
 @end

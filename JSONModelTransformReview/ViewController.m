@@ -16,7 +16,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *tf;
 @property (weak, nonatomic) IBOutlet UILabel *mjLab;
 @property (weak, nonatomic) IBOutlet UILabel *yyLab;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *SEG;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *modelTypeSeg;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *transTypeSeg;
 
 @property (nonatomic, strong) NSDictionary *json;
 
@@ -41,32 +42,60 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self.tf endEditing:YES];
 }
+- (IBAction)resetClick:(id)sender {
+    self.mjLab.text = @"--";
+    self.yyLab.text = @"--";
+}
 
 - (IBAction)mj_click:(id)sender {
     NSMutableArray* dataArr = [NSMutableArray array];
     NSTimeInterval begin = CACurrentMediaTime();
-    Class cls = (self.SEG.selectedSegmentIndex == 0) ? [MJWeiboStatus class] : [MJGHUser class];
+    Class cls = (self.modelTypeSeg.selectedSegmentIndex == 0) ? [MJWeiboStatus class] : [MJGHUser class];
+    id model = [cls mj_objectWithKeyValues:self.json];
+    [NSObject mj_resetCirclesCount];
     @autoreleasepool {
-        for (int i = 0; i < [self.tf.text integerValue]; i++) {
-            id feed = [cls mj_objectWithKeyValues:self.json];
-            [dataArr addObject:feed];
+        if (self.transTypeSeg.selectedSegmentIndex == 0) {
+            // JSON 2 Model
+            for (int i = 0; i < [self.tf.text integerValue]; i++) {
+                id feed = [cls mj_objectWithKeyValues:self.json];
+                [dataArr addObject:feed];
+            }
+        }else{
+            // Model 2 JSON
+            for (int i = 0; i < [self.tf.text integerValue]; i++) {
+                id feed = [model mj_keyValues];
+                [dataArr addObject:feed];
+            }
         }
     }
     NSTimeInterval end = CACurrentMediaTime();
+    [NSObject mj_printfCount];
     self.mjLab.text = [NSString stringWithFormat:@"%8.2f 毫秒",(end - begin) * 1000];
 }
 
 - (IBAction)yy_click:(id)sender {
     NSMutableArray* dataArr = [NSMutableArray array];
     NSTimeInterval begin = CACurrentMediaTime();
-    Class cls = (self.SEG.selectedSegmentIndex == 0) ? [YYWeiboStatus class] : [MJGHUser class];
+    Class cls = (self.modelTypeSeg.selectedSegmentIndex == 0) ? [YYWeiboStatus class] : [MJGHUser class];
+    id model = [cls yy_modelWithJSON:self.json];
+    [NSObject yy_resetCirclesCount];
     @autoreleasepool {
-        for (int i = 0; i < [self.tf.text integerValue]; i++) {
-            id feed = [cls yy_modelWithJSON:self.json];
-            [dataArr addObject:feed];
+        if (self.transTypeSeg.selectedSegmentIndex == 0) {
+            // JSON 2 Model
+            for (int i = 0; i < [self.tf.text integerValue]; i++) {
+                id feed = [cls yy_modelWithJSON:self.json];
+                [dataArr addObject:feed];
+            }
+        }else{
+            // Model 2 JSON
+            for (int i = 0; i < [self.tf.text integerValue]; i++) {
+                id feed = [model yy_modelToJSONObject];
+                [dataArr addObject:feed];
+            }
         }
     }
     NSTimeInterval end = CACurrentMediaTime();
+    [NSObject yy_printfCount];
     self.yyLab.text = [NSString stringWithFormat:@"%8.2f 毫秒",(end - begin) * 1000];
 }
 

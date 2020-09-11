@@ -56,13 +56,31 @@
                                     <segment title="GithubUserModel"/>
                                 </segments>
                             </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jkh-7H-rcw">
+                                <rect key="frame" x="80" y="185" width="215" height="32"/>
+                                <segments>
+                                    <segment title="JSON 2 Model"/>
+                                    <segment title="Model 2 JSON"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CuX-RE-Kyg">
+                                <rect key="frame" x="165.66666666666666" y="545" width="44" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1sn-ID-I5m"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="oAc-fp-kvH" firstAttribute="trailing" secondItem="pRe-Kj-tKz" secondAttribute="trailing" id="36s-5T-2aa"/>
+                            <constraint firstItem="jkh-7H-rcw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5C2-dz-Lzz"/>
                             <constraint firstItem="IbX-b3-nhQ" firstAttribute="centerY" secondItem="oAc-fp-kvH" secondAttribute="centerY" id="5jm-rP-lTl"/>
                             <constraint firstItem="oAc-fp-kvH" firstAttribute="top" secondItem="pRe-Kj-tKz" secondAttribute="bottom" constant="8" id="7J0-F4-Mdo"/>
                             <constraint firstItem="yk6-2c-tZD" firstAttribute="leading" secondItem="pRe-Kj-tKz" secondAttribute="trailing" constant="35" id="Eyc-U6-kfK"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="CuX-RE-Kyg" secondAttribute="bottom" constant="200" id="HQA-r4-2t9"/>
+                            <constraint firstItem="CuX-RE-Kyg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tzq-Tc-yCc"/>
                             <constraint firstItem="IbX-b3-nhQ" firstAttribute="leading" secondItem="oAc-fp-kvH" secondAttribute="trailing" constant="35" id="YYX-cc-9US"/>
                             <constraint firstItem="pYj-BT-cBf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="f2x-P1-l1F"/>
                             <constraint firstItem="HgZ-wq-vMt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="iBW-vi-UaI"/>
@@ -70,14 +88,16 @@
                             <constraint firstItem="pRe-Kj-tKz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-70" id="mXJ-SJ-jgL"/>
                             <constraint firstItem="pYj-BT-cBf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oPg-Fo-UDr"/>
                             <constraint firstItem="yk6-2c-tZD" firstAttribute="centerY" secondItem="pRe-Kj-tKz" secondAttribute="centerY" id="t9d-tA-56t"/>
+                            <constraint firstItem="jkh-7H-rcw" firstAttribute="top" secondItem="pYj-BT-cBf" secondAttribute="bottom" constant="30" id="uU9-3K-Bcn"/>
                             <constraint firstItem="pRe-Kj-tKz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="275" id="wGK-0A-eHj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="SEG" destination="pYj-BT-cBf" id="HWi-Hd-KbQ"/>
                         <outlet property="mjLab" destination="yk6-2c-tZD" id="95h-xO-7DL"/>
+                        <outlet property="modelTypeSeg" destination="pYj-BT-cBf" id="af6-HS-174"/>
                         <outlet property="tf" destination="HgZ-wq-vMt" id="3Tz-l8-KIj"/>
+                        <outlet property="transTypeSeg" destination="jkh-7H-rcw" id="wWD-HX-QIX"/>
                         <outlet property="yyLab" destination="IbX-b3-nhQ" id="1v8-77-umG"/>
                     </connections>
                 </viewController>

@@ -13,6 +13,9 @@
 #import "YYClassInfo.h"
 #import <objc/message.h>
 
+static long long yy_J2MCount = 0;
+static long long yy_M2JCount = 0;
+
 /// 强制内联
 #define force_inline __inline__ __attribute__((always_inline))
 
@@ -1128,6 +1131,7 @@ typedef struct {
  @param _context _context.modelMeta and _context.model should not be nil.
  */
 static void ModelSetWithDictionaryFunction(const void *_key, const void *_value, void *_context) {
+    yy_J2MCount++;
     ModelSetContext *context = _context;
     // 类元
     __unsafe_unretained _YYModelMeta *meta = (__bridge _YYModelMeta *)(context->modelMeta);
@@ -1151,6 +1155,7 @@ static void ModelSetWithDictionaryFunction(const void *_key, const void *_value,
  @param _context      _context.model and _context.dictionary should not be nil.
  */
 static void ModelSetWithPropertyMetaArrayFunction(const void *_propertyMeta, void *_context) {
+    yy_J2MCount++;
     ModelSetContext *context = _context;
     // 数据字典
     __unsafe_unretained NSDictionary *dictionary = (__bridge NSDictionary *)(context->dictionary);
@@ -1187,6 +1192,7 @@ static void ModelSetWithPropertyMetaArrayFunction(const void *_propertyMeta, voi
  @return JSON object, nil if an error occurs.
  */
 static id ModelToJSONObjectRecursive(NSObject *model) {
+    yy_M2JCount++;
     if (!model || model == (id)kCFNull) return model;
     if ([model isKindOfClass:[NSString class]]) return model;
     if ([model isKindOfClass:[NSNumber class]]) return model;
@@ -1466,6 +1472,18 @@ static NSString *ModelDescription(NSObject *model) {
 
 
 @implementation NSObject (YYModel)
+
+/**
+*  重置循环统计次数
+*/
++ (void)yy_resetCirclesCount{
+    yy_J2MCount = 0;
+    yy_M2JCount = 0;
+}
++ (void)yy_printfCount{
+    NSLog(@"yy_J2MCount：%ld", yy_J2MCount);
+    NSLog(@"yy_M2JCount：%ld", yy_M2JCount);
+}
 
 + (NSDictionary *)_yy_dictionaryWithJSON:(id)json {
     if (!json || json == (id)kCFNull) return nil;
@@ -1914,5 +1932,6 @@ static NSString *ModelDescription(NSObject *model) {
     }
     return result;
 }
+
 
 @end
