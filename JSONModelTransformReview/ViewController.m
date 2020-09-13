@@ -19,11 +19,30 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *modelTypeSeg;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *transTypeSeg;
 
-@property (nonatomic, strong) NSDictionary *json;
+@property (nonatomic, strong) NSDictionary *statusJson;
+@property (nonatomic, strong) NSDictionary *userJson;
 
 @end
 
 @implementation ViewController
+
+- (NSDictionary *)statusJson{
+    if (!_statusJson) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"weibo" ofType:@"json"];
+        NSData *data = [NSData dataWithContentsOfFile:path];
+        _statusJson = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    }
+    return _statusJson;
+}
+
+- (NSDictionary *)userJson{
+    if (!_userJson) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"user" ofType:@"json"];
+        NSData *data = [NSData dataWithContentsOfFile:path];
+        _userJson = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    }
+    return _userJson;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,11 +51,6 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     
-    /// get json data
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"weibo" ofType:@"json"];
-    NSData *data = [NSData dataWithContentsOfFile:path];
-    self.json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -51,20 +65,21 @@
     NSMutableArray* dataArr = [NSMutableArray array];
     NSTimeInterval begin = CACurrentMediaTime();
     Class cls = (self.modelTypeSeg.selectedSegmentIndex == 0) ? [MJWeiboStatus class] : [MJGHUser class];
-    id model = [cls mj_objectWithKeyValues:self.json];
+    NSDictionary* json = (self.modelTypeSeg.selectedSegmentIndex == 0) ? self.statusJson : self.userJson;
+    id model = [cls mj_objectWithKeyValues:json];
     [NSObject mj_resetCirclesCount];
     @autoreleasepool {
         if (self.transTypeSeg.selectedSegmentIndex == 0) {
             // JSON 2 Model
             for (int i = 0; i < [self.tf.text integerValue]; i++) {
-                id feed = [cls mj_objectWithKeyValues:self.json];
+                id feed = [cls mj_objectWithKeyValues:json];
                 [dataArr addObject:feed];
             }
         }else{
             // Model 2 JSON
             for (int i = 0; i < [self.tf.text integerValue]; i++) {
-                id feed = [model mj_keyValues];
-                [dataArr addObject:feed];
+                id dict = [model mj_keyValues];
+                [dataArr addObject:dict];
             }
         }
     }
@@ -76,21 +91,22 @@
 - (IBAction)yy_click:(id)sender {
     NSMutableArray* dataArr = [NSMutableArray array];
     NSTimeInterval begin = CACurrentMediaTime();
-    Class cls = (self.modelTypeSeg.selectedSegmentIndex == 0) ? [YYWeiboStatus class] : [MJGHUser class];
-    id model = [cls yy_modelWithJSON:self.json];
+    Class cls = (self.modelTypeSeg.selectedSegmentIndex == 0) ? [YYWeiboStatus class] : [YYGHUser class];
+    NSDictionary* json = (self.modelTypeSeg.selectedSegmentIndex == 0) ? self.statusJson : self.userJson;
+    id model = [cls yy_modelWithJSON:json];
     [NSObject yy_resetCirclesCount];
     @autoreleasepool {
         if (self.transTypeSeg.selectedSegmentIndex == 0) {
             // JSON 2 Model
             for (int i = 0; i < [self.tf.text integerValue]; i++) {
-                id feed = [cls yy_modelWithJSON:self.json];
+                id feed = [cls yy_modelWithJSON:json];
                 [dataArr addObject:feed];
             }
         }else{
             // Model 2 JSON
             for (int i = 0; i < [self.tf.text integerValue]; i++) {
-                id feed = [model yy_modelToJSONObject];
-                [dataArr addObject:feed];
+                id dict = [model yy_modelToJSONObject];
+                [dataArr addObject:dict];
             }
         }
     }
