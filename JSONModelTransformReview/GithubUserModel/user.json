@@ -26,5 +26,8 @@
     "public_repos": 147,
     "public_gists": 12,
     "followers": 0,
-    "following": 0
+    "following": 0,
+    "dj_test100": 100,
+    "dj_test200": "200",
+    "dj_test300": "300",
 }

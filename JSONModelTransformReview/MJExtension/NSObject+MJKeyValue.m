@@ -370,7 +370,6 @@ static const char MJReferenceReplacedKeyWhenCreatingKeyValuesKey = '\0';
     NSArray *ignoredPropertyNames = [clazz mj_totalIgnoredPropertyNames];
     
     [clazz mj_enumerateProperties:^(MJProperty *property, BOOL *stop) {
-        mj_M2JCount++;
         @try {
             // 0.检测是否被忽略
             if (allowedPropertyNames.count && ![allowedPropertyNames containsObject:property.name]) return;
@@ -404,6 +403,7 @@ static const char MJReferenceReplacedKeyWhenCreatingKeyValuesKey = '\0';
                 // 创建字典
                 __block id innerContainer = keyValues;
                 [propertyKeys enumerateObjectsUsingBlock:^(MJPropertyKey *propertyKey, NSUInteger idx, BOOL *stop) {
+                    mj_M2JCount++;
                     // 下一个属性
                     MJPropertyKey *nextPropertyKey = nil;
                     if (idx != keyCount - 1) {
@@ -444,6 +444,7 @@ static const char MJReferenceReplacedKeyWhenCreatingKeyValuesKey = '\0';
                     }
                 }];
             } else {
+                mj_M2JCount++;
                 keyValues[property.name] = value;
             }
         } @catch (NSException *exception) {

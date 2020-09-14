@@ -43,6 +43,11 @@
 @property (nonatomic, strong) NSDate *createdAt;
 @property (nonatomic, strong) NSDate *updatedAt;
 @property (nonatomic, strong) NSValue *test;
+
+@property (nonatomic, strong) NSString *dj_test100;
+@property (nonatomic, assign) UInt32 dj_test200;
+@property (nonatomic, strong) NSValue *dj_test300;
+
 @end
 
 
@@ -80,4 +85,9 @@
 @property (nonatomic, strong) NSDate *createdAt;
 @property (nonatomic, strong) NSDate *updatedAt;
 @property (nonatomic, strong) NSValue *test;
+
+@property (nonatomic, strong) NSString *dj_test100;
+@property (nonatomic, assign) UInt32 dj_test200;
+@property (nonatomic, strong) NSValue *dj_test300;
+
 @end

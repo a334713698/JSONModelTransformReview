@@ -144,4 +144,7 @@
 @property (nonatomic, strong) NSString *scheme;
 @property (nonatomic, strong) NSDictionary *visible;
 @property (nonatomic, strong) NSArray *darwinTags;
+
+@property (nonatomic, strong) NSDate *test_time;
+
 @end
